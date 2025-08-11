@@ -3,4 +3,4 @@
 
 🔭 Currently building projects in Python, SQL & Data Viz  
 📂 Pin: Retail Sales Dashboard · Data Cleaning with Python · SQL Sales Insights  
-📫 Reach: your.job.email@gmail.com · linkedin.com/in/yourprofile · github.com/yourusername
+📫 Reach: sanchitbytes@gmail.com · linkedin.com/in/sanchit-gupta-a62a99379/ · github.com/SanchitBytes · x.com/sanchitbytes

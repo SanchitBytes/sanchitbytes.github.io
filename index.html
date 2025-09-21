@@ -3,145 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sanchit's Portfolio - Data Analyst | Python | SQL | Power BI">
-    <title>Sanchit | Portfolio</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-            color: #333;
-        }
-        header {
-            background: #0d1117;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin-top: 0.5rem;
-            font-size: 1.1rem;
-            color: #9ca3af;
-        }
-        nav {
-            background: #161b22;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            padding: 1rem 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        nav a:hover {
-            color: #3b82f6;
-        }
-        section {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-        }
-        h2 {
-            color: #2563eb;
-        }
-        footer {
-            background: #0d1117;
-            color: #9ca3af;
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.9rem;
-        }
-        .skills span {
-            background: #e5e7eb;
-            padding: 0.4rem 0.8rem;
-            border-radius: 5px;
-            margin: 0.2rem;
-            display: inline-block;
-            font-size: 0.9rem;
-        }
-        .projects a {
-            display: inline-block;
-            margin-top: 0.5rem;
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .projects a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Sanchit Gupta | Data Analyst Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-    <header>
-        <h1>Hi, I'm Sanchit 👋</h1>
-        <p>Data Analyst | Python | SQL | Power BI</p>
-    </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">SanchitGupta</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <section id="about" class="card">
-        <h2>About Me</h2>
-        <p>
-            I’m a former Software Engineer at Rubico IT with strong programming skills in Python and SQL, now transitioning into Data Analytics.
-            With experience in business operations and a passion for data-driven decision-making, I specialize in cleaning, analyzing, and visualizing data to uncover insights.
-        </p>
-    </section>
-
-    <section id="skills" class="card">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>Python</span>
-            <span>SQL</span>
-            <span>Pandas</span>
-            <span>NumPy</span>
-            <span>Power BI</span>
-            <span>Tableau</span>
-            <span>Excel</span>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Transforming Raw Data into Actionable Insights</h1>
+            <p class="hero-subtitle">Data Analyst | SQL | Python | Tableau | Power BI</p>
+            <p class="hero-description">Passionate about exploring, cleaning, visualizing, and presenting data to solve real-world problems</p>
+            <button class="cta-button" onclick="scrollToSection('projects')">Explore My Projects</button>
+        </div>
+        <div class="hero-visual">
+            <svg class="data-flow" viewBox="0 0 100 100">
+                <path class="flow-path" d="M10,50 Q30,30 50,50 T90,50" />
+                <circle class="data-point" cx="10" cy="50" r="2"/>
+                <circle class="data-point" cx="30" cy="30" r="2"/>
+                <circle class="data-point" cx="50" cy="50" r="2"/>
+                <circle class="data-point" cx="70" cy="70" r="2"/>
+                <circle class="data-point" cx="90" cy="50" r="2"/>
+            </svg>
         </div>
     </section>
 
-    <section id="projects" class="card projects">
-        <h2>Projects</h2>
-        <p><strong>Retail Sales Dashboard</strong> — Power BI dashboard analyzing sales trends & top-performing products.</p>
-        <a href="https://github.com/yourusername/retail-sales-dashboard" target="_blank">View Project</a>
-
-        <p><strong>Data Cleaning with Python</strong> — Jupyter notebook transforming messy datasets into clean, analysis-ready data.</p>
-        <a href="https://github.com/yourusername/data-cleaning-python" target="_blank">View Project</a>
-
-        <p><strong>SQL Sales Insights</strong> — SQL queries generating business intelligence insights from sales data.</p>
-        <a href="https://github.com/yourusername/sql-sales-insights" target="_blank">View Project</a>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Try both options - first try the main one, if not working, use the alt version -->
+                    <img src="images/headshot.jpg" alt="Sanchit Gupta - Data Analyst" class="headshot" onerror="this.onerror=null; this.classList.add('headshot-alt'); this.classList.add('debug-image');">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I'm Sanchit Gupta, a passionate and detail-oriented Data Analyst based in Meerut, Uttar Pradesh, India. I specialize in transforming complex datasets into clear, actionable insights that drive business decisions.</p>
+                    <p>With expertise in data analysis, cleaning, visualization, and dashboarding, I'm skilled in SQL, Python (Pandas, NumPy), R programming, and generative AI. My domain expertise includes pharmaceutical data analysis and sales & distribution analytics.</p>
+                    <p>I hold a Google Data Analytics Professional Certificate and have gained practical experience through internships at Hayai Pharma Private Limited and Fast Pharma Private Limited, where I improved export and import operations through data-driven insights.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <strong>Location:</strong> Meerut, Uttar Pradesh, India
+                        </div>
+                        <div class="detail-item">
+                            <strong>Certification:</strong> Google Data Analytics Professional Certificate (v2)
+                        </div>
+                        <div class="detail-item">
+                            <strong>Domain Expertise:</strong> Pharmaceutical Data Analysis, Sales & Distribution Analytics
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:sanchitbytes@gmail.com">sanchitbytes@gmail.com</a></p>
-        <p>LinkedIn: <a href="www.linkedin.com/in/sanchitbytes" target="_blank">linkedin.com/in/sanchitbytes</a></p>
-        <p>GitHub: <a href="https://github.com/SanchitBytes" target="_blank">github.com/SanchitBytes</a></p>
-        <p>X: <a href="https://x.com/sanchitbytes" target="_blank">x.com/sanchitbytes</a></p>
+    <!-- Skills Section - Improved -->
+<!-- Skills Section - Compact -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>My Analytics Stack</h2>
+            <div class="skills-grid">
+                <!-- Technical Skills Card -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <h3>Technical Skills</h3>
+                    </div>
+                    <div class="skill-chart">
+                        <canvas id="technicalSkillsChart"></canvas>
+                    </div>
+                    <div class="skill-details">
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">R Programming</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies Card -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <h3>Tools & Technologies</h3>
+                    </div>
+                    <div class="skill-chart">
+                        <canvas id="toolsChart"></canvas>
+                    </div>
+                    <div class="skill-details">
+                        <div class="skill-item">
+                            <span class="skill-name">Tableau</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Power BI</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Excel</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        © 2025 Sanchit. All Rights Reserved.
+    <!-- Certificates Section - Simple Grid -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2>My Certifications</h2>
+            <div class="certificates-grid">
+                <!-- Google Data Analytics -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/Google_DA_page-0001.jpg" alt="Google Data Analytics Professional Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Google Data Analytics Professional Certificate</h3>
+                        <p class="certificate-org">Google | Coursera</p>
+                        <p class="certificate-date">Sep 9, 2025</p>
+                        <p class="certificate-desc">8-course program covering data cleaning, analysis, visualization, SQL, Tableau, and R programming</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">R Programming</span>
+                            <span class="skill-tag">Data Analysis</span>
+                        </div>
+                        <a href="https://coursera.org/verify/profession-al-cert/6T5T0Y8Q0U6Q" target="_blank" class="view-certificate">Verify Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Python (Basic) - HackerRank -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/python_HackerRank_page-0001.jpg" alt="Python (Basic) HackerRank Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Python (Basic) Certification</h3>
+                        <p class="certificate-org">HackerRank</p>
+                        <p class="certificate-date">Aug 15, 2025</p>
+                        <p class="certificate-desc">Passed the HackerRank skill certification test for Python programming fundamentals</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Programming</span>
+                            <span class="skill-tag">Problem Solving</span>
+                        </div>
+                        <a href="#" class="view-certificate">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- SQL (Basic) - HackerRank -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/SQL_basic_HackerRank_page-0001.jpg" alt="SQL (Basic) HackerRank Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>SQL (Basic) Certification</h3>
+                        <p class="certificate-org">HackerRank</p>
+                        <p class="certificate-date">Aug 11, 2025</p>
+                        <p class="certificate-desc">Passed the HackerRank skill certification test for SQL fundamentals and query writing</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Database</span>
+                            <span class="skill-tag">Queries</span>
+                        </div>
+                        <a href="#" class="view-certificate">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Python - Kaggle -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/Python_Kaggle.png" alt="Python Kaggle Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Python Course Completion</h3>
+                        <p class="certificate-org">Kaggle</p>
+                        <p class="certificate-date">Aug 6, 2025</p>
+                        <p class="certificate-desc">Successfully completed the Python course on Kaggle Learn platform</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Data Science</span>
+                            <span class="skill-tag">Kaggle</span>
+                        </div>
+                        <a href="#" class="view-certificate">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Data Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="Global AI Tool Adoption Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Global AI Tool Adoption Dashboard</h3>
+                                <p>Excel dashboard using pivot tables, slicers, XLOOKUP to analyze adoption trends of AI tools</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Excel</span>
+                                    <span class="tech-tag">Pivot Tables</span>
+                                    <span class="tech-tag">XLOOKUP</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/SanchitBytes/AI_Tool_Adoption_DataAnalysis_Excel.git" target="_blank" class="project-btn">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" alt="Smartphone Data Cleaning & Enrichment">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Smartphone Data Cleaning & Enrichment</h3>
+                                <p>Python pipeline with Pandas, NumPy, AI assistants to clean and enrich smartphone dataset</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">NumPy</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/SanchitBytes/Python_smartphone_data_cleaning_enrichment.git" target="_blank" class="project-btn">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project3.jpg" alt="Smartphone Market Insights using SQL">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Smartphone Market Insights using SQL</h3>
+                                <p>Advanced SQL queries to extract pricing trends, feature impact, and brand segmentation insights</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">SQL</span>
+                                    <span class="tech-tag">Window Functions</span>
+                                    <span class="tech-tag">Data Analysis</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/SanchitBytes/Smartphones_DataAnalysis_SQL.git" target="_blank" class="project-btn">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Ready to unlock the value in your data?</h2>
+            <button class="cta-button large" onclick="openEmail()">Let's Talk Data</button>
+            
+            <div class="contact-form">
+                <h3>Get In Touch</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" value="Sanchit Gupta" readonly>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" value="sanchitbytes@gmail.com" readonly>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" readonly>I'm excited to learn new things and collaborate on data-driven solutions that make an impact.</textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="social-links">
+                <a href="https://linkedin.com/in/sanchitbytes" target="_blank" class="social-link">
+                    <img src="icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/SanchitBytes" target="_blank" class="social-link">
+                    <img src="icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://x.com/sanchitbytes" target="_blank" class="social-link">
+                    <img src="icons/twitter.svg" alt="X (Twitter)">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sanchit Gupta. Built with a passion for data.</p>
+            <a href="resume.pdf" download class="resume-download">Download Resume (PDF)</a>
+        </div>
     </footer>
 
+    <script src="scripts/main.js"></script>
 </body>
 </html>

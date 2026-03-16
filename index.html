@@ -2,313 +2,269 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Sanchit Gupta | Agentic AI Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanchit Gupta | Applied AI Engineer</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
     <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #06b6d4;
+            --accent: #f59e0b;
+            --text: #0f172a;
+            --muted: #64748b;
+            --bg: #f8fafc;
+            --card: #ffffff;
+        }
+
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0
         }
 
         body {
-            background: #0f172a;
-            color: #e2e8f0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
         }
 
         header {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 40px;
-            padding: 60px 20px;
-            background: #111827;
-            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 50px;
         }
 
-        header img {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
+        .profile {
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 4px solid #2563eb;
+            object-fit: cover;
+            border: 4px solid var(--primary);
         }
 
-        .header-text {
-            max-width: 600px;
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 8px;
         }
 
-        .header-text h1 {
-            font-size: 32px;
+        .subtitle {
+            color: var(--muted);
+            font-size: 1rem;
             margin-bottom: 10px;
         }
 
-        .header-text p {
-            color: #94a3b8;
+        .links a {
+            margin-right: 18px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
         }
 
         section {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 30px;
+            margin-top: 50px;
         }
 
         h2 {
-            margin-bottom: 25px;
-            color: #3b82f6;
-            border-bottom: 2px solid #3b82f6;
-            padding-bottom: 5px;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+            color: var(--primary);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px;
         }
 
-        /* Skills */
+        p {
+            margin-bottom: 12px
+        }
 
-        .skills span {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: var(--card);
             padding: 6px 12px;
-            margin: 5px;
-            border-radius: 4px;
-            font-size: 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid #e2e8f0;
         }
 
-        /* Card Layout */
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 25px;
+        .project {
+            background: var(--card);
+            padding: 20px;
             border-radius: 10px;
-            border: 1px solid #334155;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-bottom: 18px;
+            border: 1px solid #e2e8f0;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .card h3 {
-            color: #60a5fa;
+        .project h3 {
             margin-bottom: 5px;
         }
 
-        .card h4 {
-            font-size: 14px;
-            color: #94a3b8;
-            margin-bottom: 15px;
+        .tech {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
         }
 
-        .card ul {
-            margin-left: 18px;
+        .exp {
+            margin-bottom: 20px;
+        }
+
+        .role {
+            font-weight: 600;
+        }
+
+        .company {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 6px;
         }
 
         footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            color: var(--muted);
             text-align: center;
-            padding: 20px;
-            background: #111827;
-            margin-top: 40px;
-            color: #94a3b8;
-        }
-
-        a {
-            color: #3b82f6;
-            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Header -->
+    <div class="container">
 
-    <header>
-        <img src="images/profile.JPG" alt="Sanchit Gupta">
+        <header>
+            <img src="images/profile.JPG" class="profile" />
 
-        <div class="header-text">
-            <h1>Sanchit Gupta</h1>
-            <h3>Agentic AI & Generative AI Engineer</h3>
+            <div>
+                <h1>Sanchit Gupta</h1>
+                <div class="subtitle">Applied AI Engineer building production GenAI systems, RAG platforms, and agentic
+                    workflows</div>
 
+                <div class="links">
+                    <a href="mailto:sanchitbytes@gmail.com">Email</a>
+                    <a href="https://github.com/sanchitbytes" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/sanchitbytes" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+        </header>
+
+        <section>
+            <h2>About</h2>
             <p>
-                Specialized in Multi-Agent Systems, MCP, RAG Architectures,
-                and Containerized AI Deployments.
+                Applied AI Engineer focused on building production GenAI systems including multi-agent workflows,
+                retrieval augmented generation (RAG) pipelines, and enterprise knowledge platforms.
             </p>
+            <p>
+                Experienced designing end-to-end AI applications using LangGraph, LangChain, vector databases, and AWS
+                infrastructure to transform unstructured data into searchable knowledge systems and automation tools.
+            </p>
+        </section>
 
-            <p>Email: sanchitbytes@gmail.com | Phone: +91-8909064040</p>
-        </div>
-    </header>
+        <section>
+            <h2>Core Technologies</h2>
 
-    <!-- Summary -->
-
-    <section>
-        <h2>Professional Summary</h2>
-
-        <p>
-            Agentic AI and Generative AI Developer specializing in Intelligent Agent Systems,
-            Model Context Protocol (MCP), Retrieval-Augmented Generation (RAG),
-            and scalable cloud deployments on AWS.
-        </p>
-    </section>
-
-    <!-- Skills -->
-
-    <section>
-        <h2>Core Skills</h2>
-
-        <div class="skills">
-            <span>LangGraph</span>
-            <span>LangChain</span>
-            <span>AutoGen</span>
-            <span>FastMCP</span>
-            <span>MCP</span>
-            <span>GPT-4</span>
-            <span>Claude</span>
-            <span>Pinecone</span>
-            <span>FAISS</span>
-            <span>Python</span>
-            <span>FastAPI</span>
-            <span>Docker</span>
-            <span>AWS</span>
-        </div>
-    </section>
-
-    <!-- Experience Cards -->
-
-    <section>
-        <h2>Professional Experience</h2>
-
-        <div class="card-grid">
-
-            <div class="card">
-                <h3>AI Engineer</h3>
-                <h4>Hayai Pharma | 2023–Present</h4>
-
-                <ul>
-                    <li>Built RAG systems for pharma datasets</li>
-                    <li>Developed multi-agent workflows</li>
-                    <li>Deployed AI systems on AWS</li>
-                    <li>Automated operations using n8n</li>
-                </ul>
+            <div class="skills">
+                <div class="skill">Python</div>
+                <div class="skill">LangGraph</div>
+                <div class="skill">LangChain</div>
+                <div class="skill">RAG Systems</div>
+                <div class="skill">Multi-Agent Systems</div>
+                <div class="skill">Vector Databases</div>
+                <div class="skill">Pinecone</div>
+                <div class="skill">FAISS</div>
+                <div class="skill">FastAPI</div>
+                <div class="skill">AWS</div>
+                <div class="skill">Docker</div>
+                <div class="skill">Git</div>
             </div>
 
-            <div class="card">
-                <h3>Software Engineer</h3>
-                <h4>RubicoIT | 2018</h4>
+        </section>
 
-                <ul>
-                    <li>Software development & maintenance</li>
-                    <li>System debugging and support</li>
-                    <li>Cross-team collaboration</li>
-                </ul>
+        <section>
+            <h2>Selected AI Projects</h2>
+
+            <div class="project">
+                <h3>Market Intelligence GenAI Assistant</h3>
+                <div class="tech">LangGraph · RAG · FAISS · Ollama · Python</div>
+                <p>
+                    GenAI system that analyzes large market research reports and extracts insights about drug demand,
+                    competitors, and importers. Reduced manual report analysis by ~70%.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>Operations & Management</h3>
-                <h4>Self-Employed | 2019–2023</h4>
-
-                <ul>
-                    <li>Managed business operations</li>
-                    <li>Vendor & client coordination</li>
-                    <li>Workflow optimization</li>
-                </ul>
+            <div class="project">
+                <h3>Regulatory Compliance GenAI Assistant</h3>
+                <div class="tech">LangGraph · LangChain · RAG · Pinecone · Mistral</div>
+                <p>
+                    AI assistant for retrieving and analyzing regulatory guidelines and compliance documents using
+                    semantic search and LLM reasoning.
+                </p>
             </div>
 
-        </div>
-    </section>
-
-    <!-- Projects Cards -->
-
-    <section>
-        <h2>Key Projects</h2>
-
-        <div class="card-grid">
-
-            <div class="card">
-                <h3>MCP-Based AI Chat Platform</h3>
-                <h4>FastAPI • MCP • Docker • LangChain</h4>
-
-                <ul>
-                    <li>LLM tool orchestration via MCP</li>
-                    <li>FastAPI backend architecture</li>
-                    <li>Dockerized microservices</li>
-                    <li>One-command deployment</li>
-                </ul>
+            <div class="project">
+                <h3>Multi-Agent Packaging Content Generator</h3>
+                <div class="tech">LangGraph · Python · Pydantic</div>
+                <p>
+                    Multi-agent system that converts raw drug specification data into standardized packaging content
+                    such as dosage, warnings, and storage instructions.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>Knowledge Management GenAI Bot</h3>
-                <h4>RAG • AWS • Pinecone • Kendra</h4>
+        </section>
 
-                <ul>
-                    <li>80k+ document knowledge base</li>
-                    <li>Multi-agent governance workflows</li>
-                    <li>70% faster query resolution</li>
-                    <li>85% task automation</li>
-                </ul>
+        <section>
+            <h2>Experience</h2>
+
+            <div class="exp">
+                <div class="role">AI Engineer</div>
+                <div class="company">Hayai Pharma Private Limited · 2023 — Present</div>
+                <p>
+                    Building RAG-based document intelligence systems and multi-agent workflows for regulatory and market
+                    intelligence analysis.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>MiIglooo Lead Enhancement System</h3>
-                <h4>n8n • Salesforce • Twilio • AI</h4>
-
-                <ul>
-                    <li>AI-based lead scoring</li>
-                    <li>CRM automation</li>
-                    <li>SMS workflows</li>
-                    <li>Audit logging</li>
-                </ul>
+            <div class="exp">
+                <div class="role">Business Operations & Management</div>
+                <div class="company">Family Enterprise · 2019 — 2023</div>
+                <p>
+                    Managed operations including sales, procurement, vendor relationships, and CRM processes while
+                    improving operational workflows and customer management.
+                </p>
             </div>
 
-        </div>
-    </section>
+            <div class="exp">
+                <div class="role">Software Engineer</div>
+                <div class="company">RubicoIT Private Limited · 2018</div>
+                <p>
+                    Developed web and backend applications using PHP, WordPress, and REST APIs while collaborating with
+                    engineering teams on production client systems.
+                </p>
+            </div>
 
-    <!-- Education -->
+        </section>
 
-    <section>
-        <h2>Education</h2>
+        <footer>
+            <p>© 2026 Sanchit Gupta · Built with HTML & GitHub Pages</p>
+        </footer>
 
-        <ul>
-            <li>MCA — Graphic Era University (2018)</li>
-            <li>BCA — Graphic Era University (2016)</li>
-        </ul>
-    </section>
-
-    <!-- Achievements -->
-
-    <section>
-        <h2>Key Achievements</h2>
-
-        <ul>
-            <li>80% customer automation via agents</li>
-            <li>95% underwriting accuracy</li>
-            <li>10TB+ semantic search systems</li>
-            <li>80% deployment time reduction</li>
-        </ul>
-    </section>
-
-    <!-- Contact -->
-
-    <section>
-        <h2>Contact</h2>
-
-        <p>Email: <a href="mailto:sanchitbytes@gmail.com">sanchitbytes@gmail.com</a></p>
-        <p>Phone: +91-8909064040</p>
-        <p>Location: Meerut, India</p>
-    </section>
-
-    <footer>
-        © 2026 Sanchit Gupta | Agentic AI Engineer
-    </footer>
+    </div>
 
 </body>
 
